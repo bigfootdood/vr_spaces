@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <a-asset-item id="sculpt-obj" src="sculpt01/01.obj"></a-asset-item>
+        <a-asset-item id="sculpt-mtl" src="sculpt01/01.mtl"></a-asset-item>
+      </a-assets>
+      <a-sky color="black"></a-sky>
+      <a-light type="ambient" position="0 10 0" intensity="1.5"></a-light>
+
+      <a-obj-model src="#sculpt-obj" mtl="#sculpt-mtl" position="0 2.2 -6" rotation="5 -60 -150" scale="0.03 0.03 0.03">
+        <a-animation attribute="rotation"
+             dur="50000"
+             fill="forwards"
+             to="0 360 0"
+             repeat="indefinite"
+             direction="alternate"></a-animation>
+      </a-obj-model>
+      <audio loop >
+        <source src="sculpt01/sculpt01.wav" type="audio/wav">
+      </audio>
+    </a-scene>
+  </body>
+</html>
